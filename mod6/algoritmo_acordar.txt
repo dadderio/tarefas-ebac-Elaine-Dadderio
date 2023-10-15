@@ -1,0 +1,27 @@
+Algoritmo da minha linda manhã
+
+1. Toca do despertador
+2. Levanto da  cama
+3. Vejo se é dia de trabalhar:
+	Se não é sábado ou domingo:
+		Desligo o alarme.
+		Tomo meu remédio.
+		Fico feliz e e volto pra cama e durmo até mais tarde.
+	Se é dia de semana:
+		Desligo o alarme.
+		Tomo meu remédio.
+		Fico triste e levanto triste mesmo.
+4. Vou até o banheiro.
+5. Lavo o rosto e escovo os dentes.
+6. Vou até a cozinha.
+7. Faço o café da manhã.
+	Pego o leite, uma colher, duas xícaras e o achocolatado.
+	Coloco 2 colheres em cada xícara e mexo.
+	Esquento no microondas.
+	Corto dois pães.
+	Passo manteiga nos pães
+	Coloco um pão em cada prato.
+8. Levo os pratos até a mesa.
+9. Chamo o meu filho.
+
+		
