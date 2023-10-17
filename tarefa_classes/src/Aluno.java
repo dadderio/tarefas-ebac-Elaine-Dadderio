@@ -21,6 +21,8 @@ public class Aluno {
         System.out.println("Suas notas foram: "+  notas);
     }
 
+
+
     public void calcularMedia(){
         for(int i=0; i< notas.size(); i++){
             totalNota = totalNota + notas.get(i);
@@ -30,6 +32,7 @@ public class Aluno {
         boletim(media);
     }
 
+
     public void boletim(float media){
         if(media > 6){
             System.out.println("Você está aprovado");
@@ -38,5 +41,13 @@ public class Aluno {
             }else{
                 System.out.println("Você está reprovado");
             }
+   }
+
+    /**
+     * @deprecated
+     * @param nome
+     */
+   public void registrarAluno(String nome){
+        this.nomeAluno = nome;
    }
 }

@@ -22,5 +22,6 @@ public class Main {
         }
         aluno.listarNotas();
         aluno.calcularMedia();
+        
     }
 }
