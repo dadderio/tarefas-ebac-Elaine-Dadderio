@@ -18,7 +18,7 @@ public class Main {
             while(nota < 0 || nota > 10 ){
                 System.out.println("Atenção: a nota digitada está fora do range de 0 a 10");
                 System.out.println("DIGITE NOVAMENTE A " + i + ".ª NOTA DE 0 A 10: ");
-                nota = scanner.nextInt();
+                nota = scanner.nextDouble();
                 }
             soma = soma + nota;
             media = soma / i;
