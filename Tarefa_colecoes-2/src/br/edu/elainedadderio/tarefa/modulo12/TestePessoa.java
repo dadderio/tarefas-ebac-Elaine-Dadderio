@@ -66,7 +66,6 @@ public class TestePessoa {
             System.out.println("Nome :" + pessoa.getNome() + " - " + "Gênero: " + pessoa.getGenero());
         }
     }
-
     private static void listarPorGenero(List<Pessoa> todas) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Digite o gênero que deseja listar (F/M): ");
@@ -81,6 +80,39 @@ public class TestePessoa {
 
     }
 }
+
+/*   private static void listarPorGenero(List<Pessoa> todas, List<Pessoa> generoF, List<Pessoa> generoM) {
+        generoF.clear();
+        generoM.clear();
+
+        for (Pessoa pessoa : todas) {
+            if (pessoa.getGenero() == 'F') {
+                generoF.add(pessoa);
+            } else if (pessoa.getGenero() == 'M') {
+                generoM.add(pessoa);
+            }
+        }
+
+        System.out.println("Lista de Pessoas do Gênero 'F':");
+        if (generoF.isEmpty()) {
+            System.out.println("Nenhuma pessoa do gênero 'F' cadastrada.");
+        } else {
+            for (Pessoa pessoa : generoF) {
+                System.out.println("Nome: " + pessoa.getNome() + " - Gênero: " + pessoa.getGenero());
+            }
+        }
+
+        System.out.println("Lista de Pessoas do Gênero 'M':");
+        if (generoM.isEmpty()) {
+            System.out.println("Nenhuma pessoa do gênero 'M' cadastrada.");
+        } else {
+            for (Pessoa pessoa : generoM) {
+                System.out.println("Nome: " + pessoa.getNome() + " - Gênero: " + pessoa.getGenero());
+            }
+        }
+    }
+} */
+
 
 
 
