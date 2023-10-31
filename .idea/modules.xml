@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Teste/Teste.iml" filepath="$PROJECT_DIR$/Teste/Teste.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mod5/mod5.iml" filepath="$PROJECT_DIR$/mod5/mod5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tarefa_calculo_media/tarefa_calculo_media.iml" filepath="$PROJECT_DIR$/tarefa_calculo_media/tarefa_calculo_media.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tarefa_classes/tarefa_classes.iml" filepath="$PROJECT_DIR$/tarefa_classes/tarefa_classes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tarefa_colecoes/tarefa_colecoes.iml" filepath="$PROJECT_DIR$/tarefa_colecoes/tarefa_colecoes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tarefa_controleDeFluxo/tarefa_controleDeFluxo.iml" filepath="$PROJECT_DIR$/tarefa_controleDeFluxo/tarefa_controleDeFluxo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tarefa_wrapper/tarefa_wrapper.iml" filepath="$PROJECT_DIR$/tarefa_wrapper/tarefa_wrapper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/tarefas-ebac-Elaine-Dadderio.iml" filepath="$PROJECT_DIR$/.idea/tarefas-ebac-Elaine-Dadderio.iml" />
+    </modules>
+  </component>
+</project>
