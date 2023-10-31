@@ -1,22 +1,24 @@
 package br.edu.dadderio.tarefa.mod13;
 
-import java.util.List;
-
-public abstract class Pessoa{
+public abstract class Pessoa extends Endereco{
     private String nome;
     private String sobrenome;
-    private Endereco endereco;
-    private List<Pessoa> pessoas;
 
 
-    public void adicionar(Pessoa pessoa){
-        this.pessoas.add(pessoa);
+
+    public String getNome() {
+        return nome;
     }
 
-    public abstract Double renda();
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 
-    public void imprimirRenda(){
-        Double valor = renda();
-        System.out.println(valor);
+    public String getSobrenome() {
+        return sobrenome;
+    }
+
+    public void setSobrenome(String sobrenome) {
+        this.sobrenome = sobrenome;
     }
 }
