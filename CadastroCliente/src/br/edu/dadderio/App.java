@@ -46,8 +46,6 @@ public class App {
 
         String[] dadosSeparados = dado.split(",");
 
-        System.out.println(dadosSeparados);
-        System.out.println(dadosSeparados.length);
 
         while(dadosSeparados.length != 7){
             String novoDado = JOptionPane.showInputDialog(null,"Digite novamente os dados do cliente separados por vírgula: Nome, CPF, Telefone, Endereço, Número, Cidade, Estado", "Cadastro", JOptionPane.INFORMATION_MESSAGE);
@@ -56,7 +54,7 @@ public class App {
 
         List<String> todosDados = new ArrayList<>();
         for(String dados: dadosSeparados){
-        todosDados.add(dados);
+            todosDados.add(dados);
         }
 
        System.out.println(todosDados);
@@ -80,13 +78,6 @@ public class App {
             }
         }
 
-
-        if (todosDados.get(5).isBlank()){
-            todosDados.set(5, "null");
-        }
-        if (todosDados.get(6).isBlank()) {
-            todosDados.set(6, "null");
-        }
 
         System.out.println(todosDados);
         return todosDados;
