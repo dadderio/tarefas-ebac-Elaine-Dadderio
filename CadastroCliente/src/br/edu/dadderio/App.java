@@ -35,11 +35,18 @@ public class App {
                     } else if(isConsultar(opcao)){
                         String dados = JOptionPane.showInputDialog(null,"Digite o CPF que deseja consultar (somente números)", "Consulta", JOptionPane.INFORMATION_MESSAGE);
                         consultar(dados);
+                    } else if (isExcluir(opcao)){
+                        String dados = JOptionPane.showInputDialog(null,"Digite o CPF que deseja excluir (somente números)", "Exclusão", JOptionPane.INFORMATION_MESSAGE);
+                        excluir(dados);
+                    } else if (isAlterar(opcao)){
+                        String dados = JOptionPane.showInputDialog(null,"Para alterar, digite os dados do cliente separados por vírgula: Nome, CPF, Telefone, Endereço, Número, Cidade, Estado", "Alteração", JOptionPane.INFORMATION_MESSAGE);
+                        alterar(dadoValidado(dados));
                     }
-            opcao = JOptionPane.showInputDialog(null,"Digite 1 para cadastrar, 2 para consultar, 3 para excluir, 4 para alterar e 5 para sair", "Cadastro de Clientes", JOptionPane.INFORMATION_MESSAGE);
-        }
 
-    }
+            opcao = JOptionPane.showInputDialog(null,"Digite 1 para cadastrar, 2 para consultar, 3 para excluir, 4 para alterar e 5 para sair", "Cadastro de Clientes", JOptionPane.INFORMATION_MESSAGE);
+
+            }
+        }
 
 
     private static List<String> dadoValidado (String dado) {
@@ -78,8 +85,8 @@ public class App {
             }
         }
 
-
         System.out.println(todosDados);
+
         return todosDados;
     }
 
@@ -89,25 +96,41 @@ public class App {
             Boolean isCadastrado = iClienteDAO.cadastrar(cliente);
             if (isCadastrado) {
                 JOptionPane.showMessageDialog(null, "Cliente cadastrado com sucesso", "Cadastro", JOptionPane.INFORMATION_MESSAGE);
-                System.out.println(iClienteDAO.buscarTodos());
                     } else {
                         JOptionPane.showMessageDialog(null, "Cliente já se encontra cadastrado!", "Erro", JOptionPane.INFORMATION_MESSAGE);
                     }
-        }
+    }
 
     private static void consultar(String dado) {
         String nCpf = dado.trim();
 
-        /*while (nCpf.length() != 11) {*/
-            if(nCpf.length() == 11){
-                Cliente cliente = iClienteDAO.consultar(Long.parseLong(nCpf));
+            Cliente cliente = null;
+            if(nCpf.length() == 11) {
+                cliente = iClienteDAO.consultar(Long.parseLong(nCpf));
+            }
+            if(cliente != null){
                 JOptionPane.showMessageDialog(null, "Cliente encontrado: " + cliente.toString(), "Consulta", JOptionPane.INFORMATION_MESSAGE);
-            }/*else {
-                JOptionPane.showMessageDialog(null, "Digite um CPF com 11 dígitos", "Consulta", JOptionPane.INFORMATION_MESSAGE);
-                nCpf = JOptionPane.showInputDialog(null, "Digite novamente o CPF com 11 dígitos (somente números)", "Consultar por CPF", JOptionPane.INFORMATION_MESSAGE);
-            }*/
+            }else {
+                JOptionPane.showMessageDialog(null, "Cliente não encontrado", "Consulta", JOptionPane.INFORMATION_MESSAGE);
+            }
+    }
 
-        //}
+    private static void excluir(String dados) {
+        String nCpf = dados.trim();
+
+       if(nCpf.length() == 11) {
+           iClienteDAO.excluir(Long.parseLong(nCpf));
+        }
+       if(iClienteDAO.consultar(Long.parseLong(nCpf)) == null){
+           JOptionPane.showMessageDialog(null, "Cliente sob CPF nº "+nCpf + " foi excluído!", "Exclusão", JOptionPane.INFORMATION_MESSAGE);
+       }
+    }
+
+    private static void alterar(List<String> dadoValidado) {
+
+
+       //iClienteDAO.alterar((Cliente) dadoValidado);  PAREI AQUIIIIIIII
+        JOptionPane.showMessageDialog(null, "Dados alterados: ", "Alteração", JOptionPane.INFORMATION_MESSAGE);
     }
 
     private static boolean isOpcaoSair(String opcao) {
@@ -130,6 +153,21 @@ public class App {
         }
         return false;
     }
+
+    private static boolean isExcluir(String opcao) {
+        if("3".equals(opcao)){
+            return true;
+        }
+        return false;
+    }
+
+    private static boolean isAlterar(String opcao) {
+        if("4".equals(opcao)){
+            return true;
+        }
+        return false;
+    }
+
 
     private static void sair() {
         JOptionPane.showMessageDialog(null,"Até logo!", "Cadastro de Clientes", JOptionPane.INFORMATION_MESSAGE);
