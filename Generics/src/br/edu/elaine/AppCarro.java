@@ -1,5 +1,8 @@
 package br.edu.elaine;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class AppCarro {
     public static void main(String[] args) {
 
@@ -7,16 +10,18 @@ public class AppCarro {
         Hyundai hyundai = new Hyundai();
         Nissan nissan = new Nissan();
 
-        CarroGenerics<Honda> carroHonda = new CarroGenerics<>(honda);
-        carroHonda.detalhesCarro();
-        carroHonda.dirigirCarro();
 
-        CarroGenerics<Hyundai> carroHyundai = new CarroGenerics<>(hyundai);
-        carroHyundai.detalhesCarro();
-        carroHyundai.dirigirCarro();
+        List<Carro> carrosList = new ArrayList<Carro>();
+        carrosList.add(honda);
+        carrosList.add(nissan);
+        carrosList.add(hyundai);
 
-        CarroGenerics<Nissan> carroNissan = new CarroGenerics<>(nissan);
-        carroNissan.detalhesCarro();
-        carroNissan.dirigirCarro();
+        for (Carro carro : carrosList) {
+            CarroGenerics<Carro> carroGenerico = new CarroGenerics<>(carro);
+            carroGenerico.detalhesCarro();
+            carroGenerico.dirigirCarro();
+
+            System.out.println("=====================================================");
+        }
     }
 }
