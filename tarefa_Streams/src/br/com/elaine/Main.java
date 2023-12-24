@@ -88,6 +88,6 @@ public class Main {
         listaHomens.forEach(System.out::println);
         long count = listaHomens.stream()
                 .count();
-        System.out.println("Número de homens cadastradas: "+count);
+        System.out.println("Número de homens cadastrados: "+count);
     }
 }
