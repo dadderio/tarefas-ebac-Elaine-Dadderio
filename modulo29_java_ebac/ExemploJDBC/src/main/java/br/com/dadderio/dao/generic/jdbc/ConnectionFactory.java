@@ -13,8 +13,10 @@ public class ConnectionFactory {
 
     }
 
-    public static Connection getConnection(){
+    public static Connection getConnection() throws SQLException{
         if (connection == null){
+            connection = initConnection();
+        } else if (connection != null && connection.isClosed()) {
             connection = initConnection();
         }
         return connection;
