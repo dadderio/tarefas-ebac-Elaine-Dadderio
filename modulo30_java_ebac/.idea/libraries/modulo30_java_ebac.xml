@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="modulo30_java_ebac">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/projetoVendas/src/main/java" />
+      <root url="file://$PROJECT_DIR$/projetoVendas/src/test/java" />
+    </SOURCES>
+  </library>
+</component>
